@@ -26,6 +26,14 @@ public class TEXT4 {
 			String newStr = str.replaceAll("(.)(\\1)*", "$1");
 			System.out.println("字符串压缩：" + newStr);
 		}
+	 public static void Text6(String str) {
+		 Pattern p = Pattern.compile("abc$");
+			Matcher m = p.matcher(str);
+			if(m.find())
+				System.out.println("字符串"+str + "是以abc结尾的字符串！");
+			else
+				System.out.println("字符串"+str + "不是以abc结尾的字符串！");
+	 }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -39,6 +47,9 @@ public class TEXT4 {
     	
     	System.out.println("第三题：");
 		Text3("aaabbbccccd");
+		
+		System.out.println("第六题：");
+		Text6("abcabcabc");
 	}
 
 
