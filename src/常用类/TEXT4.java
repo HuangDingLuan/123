@@ -34,6 +34,20 @@ public class TEXT4 {
 			else
 				System.out.println("字符串"+str + "不是以abc结尾的字符串！");
 	 }
+	 public void Text8() {
+		 String s="ae256dd—w348e6";
+		 String[] num=new String[3];
+		 Pattern p=Pattern.compile("\\d+");
+		 Matcher m=p.matcher(s);
+		 int i=0;
+		 while(m.find()) {
+		 num[i]=m.group();
+		 i++;
+		 }
+		 for(int j=0;j<i;j++) {
+		 System.out.println(num[j]+",");
+		 }
+		 }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -50,6 +64,11 @@ public class TEXT4 {
 		
 		System.out.println("第六题：");
 		Text6("abcabcabc");
+		
+		System.out.println("第八题：");
+		t.Text8();
+		System.out.println();
+		
 	}
 
 
