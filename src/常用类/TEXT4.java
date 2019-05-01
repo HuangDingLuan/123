@@ -20,7 +20,12 @@ public class TEXT4 {
 			if(m.find()) {
 				System.out.println("ip:"+ip.substring(m.start(),m.end()));
 				}
+
 			}
+	 public static void Text3(String str){
+			String newStr = str.replaceAll("(.)(\\1)*", "$1");
+			System.out.println("字符串压缩：" + newStr);
+		}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -31,6 +36,9 @@ public class TEXT4 {
     	System.out.println("第二题：");
     	TEXT4 t=new TEXT4();
     	t.Test2();
+    	
+    	System.out.println("第三题：");
+		Text3("aaabbbccccd");
 	}
 
 
