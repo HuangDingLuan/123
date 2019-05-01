@@ -29,5 +29,12 @@ public class TEXT5 {
 		System.out.println("长的日期时间格式：" + localDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG,FormatStyle.LONG)));
 		System.out.println("完整的日期格式：" + localDateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)));
 		System.out.println("完整的日期时间格式：" + localDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL,FormatStyle.LONG)));
+		
+		//使用java8的日期时间包获取当前系统时间，并修改这个时间（分别修改年份、月份、天、小时）
+		System.out.println("修改年份：" + localDateTime.plusYears(3));
+		System.out.println("修改月份：" + localDateTime.plusMonths(2));
+		System.out.println("修改天数：" + localDateTime.plusDays(3));
+		System.out.println("修改小时：" + localDateTime.plusHours(6));
    }
+	
 }
