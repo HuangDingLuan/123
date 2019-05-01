@@ -2,6 +2,7 @@ package 常用类;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class TEXT6 {
 
@@ -29,6 +30,19 @@ public class TEXT6 {
 		        }
 
 		        System.out.println();
+		        
+		        System.out.print("查询位置的数值为：");
+		        Scanner scanner = new Scanner(System.in);
+		        int inputNum = scanner.nextInt();
+
+		        int index = Arrays.binarySearch(arr, inputNum);
+
+		        System.out.println();
+		        if (index >= 0)
+		            System.out.println(inputNum + "的位置在第" + index+"个");
+		        else
+		            System.out.println("找不到" + inputNum);
+
 
 	}
 
