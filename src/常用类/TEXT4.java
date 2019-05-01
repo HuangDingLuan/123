@@ -48,6 +48,14 @@ public class TEXT4 {
 		 System.out.println(num[j]+",");
 		 }
 		 }
+	 public static void Text9(String str){
+		 String str1 = "pupel";
+		 String str2 = "pupil";
+		 Pattern p = Pattern.compile(str1);
+		 Matcher m = p.matcher(str);
+		 String newStr = m.replaceAll(str2);
+		 System.out.println(str + " 替换后结果为：" + newStr);
+	 }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -68,6 +76,9 @@ public class TEXT4 {
 		System.out.println("第八题：");
 		t.Text8();
 		System.out.println();
+		
+		System.out.println("第九题：");
+		Text9("pupel");
 		
 	}
 
