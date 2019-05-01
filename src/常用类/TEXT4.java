@@ -56,6 +56,13 @@ public class TEXT4 {
 		 String newStr = m.replaceAll(str2);
 		 System.out.println(str + " 替换后结果为：" + newStr);
 	 }
+	 public static void Text10(String str){
+			Pattern p = Pattern.compile("%CXLL=.*?(?=%)");
+			Matcher m = p.matcher(str);
+			System.out.println("提取的字符串：");
+			while(m.find())
+				System.out.println(m.group());
+	 }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -79,6 +86,9 @@ public class TEXT4 {
 		
 		System.out.println("第九题：");
 		Text9("pupel");
+		
+		System.out.println("第十题：");
+		Text10("%...%CXLL=add1,31,123.12%CXLL=add2,32,124%CXLL=,33,125.12%LL=-121.11");
 		
 	}
 
