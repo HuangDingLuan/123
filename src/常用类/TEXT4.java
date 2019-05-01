@@ -13,6 +13,14 @@ public class TEXT4 {
 	        else
 	            System.out.println("电话号码："+phone +  "不符合(0000)0000-0000");
 	    }
+	 public void Test2() {
+			Pattern p=Pattern.compile("(\\d{1,3}\\.){3}\\d{1,3}");
+			String ip=" 111.222.33.444";
+			Matcher m=p.matcher(ip);
+			if(m.find()) {
+				System.out.println("ip:"+ip.substring(m.start(),m.end()));
+				}
+			}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,6 +28,10 @@ public class TEXT4 {
 		Test1("(2019)1314-1520");
     	Test1("123456789012");
 
+    	System.out.println("第二题：");
+    	TEXT4 t=new TEXT4();
+    	t.Test2();
 	}
+
 
 }
